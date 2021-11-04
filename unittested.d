@@ -37,18 +37,16 @@ shared static this() {
 
         foreach (test; tests) {
             TestResult result;
-            scope(exit) {
-                if (result.passed) {
-                    test.onPassed(result);
-                    passed += 1;
-                } else {
-                    test.onFailed(result);
-                    failed += 1;
-                }
-                test.onEnd(result);
-            }
             test.onStart();
             test.run(result);
+            if (result.passed) {
+                test.onPassed(result);
+                passed += 1;
+            } else {
+                test.onFailed(result);
+                failed += 1;
+            }
+            test.onEnd(result);
         }
 
         return UnitTestResult(passed + failed, passed, false, false);

@@ -39,6 +39,7 @@ The test runner is a heavily modified version of [`silly`], and you should use t
   solution under the relevant test
 - Removed filtering
 - Removed discovery of tests in classes and structs
+- Removed fail-fast mode (failure in a test block won't affect others)
 - Changed to use `std.datetime.stopwatch.StopWatch`
 
 ## Acknowledgements
