@@ -1,0 +1,9 @@
+{
+  "name": "unittested",
+  "description": "D unittest runner for Codewars",
+  "authors": [],
+  "license": "ISC",
+  "sourceFiles": ["unittested.d"],
+  "importPaths": ["."],
+  "targetType": "sourceLibrary"
+}

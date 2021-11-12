@@ -1,0 +1,16 @@
+{
+  "name": "example",
+  "configurations": [
+    {
+      "name": "unittest",
+      "dependencies": {
+        "fluent-asserts": "~>0.14.0-alpha.9",
+        "unittested": {
+          "path": "../",
+          "version": ">=0.0.0"
+        }
+      },
+      "dflags": ["-checkaction=context"]
+    }
+  ]
+}
